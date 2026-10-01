@@ -45,7 +45,17 @@ public class CircularLinkedList<T> {
     }
 
     public int find(T t){
-        return 0;
+        Node<T> curr = dummy.next;
+        int i = 0;
+
+        while (curr != dummy){
+            if(curr.value == t){
+                return i;
+            }
+            curr = curr.next;
+            i++;
+        }
+        return -1;
     }
 
     public void remove(T t){

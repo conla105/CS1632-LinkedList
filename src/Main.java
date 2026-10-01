@@ -8,7 +8,11 @@ public class Main {
 
         l.showList();
         l.showReverseList();
-        l.showList();
+        System.out.println(l.find(2));
+        System.out.println(l.find(3));
+        System.out.println(l.find(1));
+        System.out.println(l.find(4));
+        System.out.println(l.find(5));
 
 
 
