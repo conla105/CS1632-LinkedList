@@ -9,7 +9,14 @@ public class CircularLinkedList<T> {
 
     public void addItem(T t){
         Node<T> node = new Node<>(t);
+        Node<T> curr = dummy;
 
+        while(curr.next != dummy){
+            curr = curr.next;
+        }
+
+        curr.next = node;
+        node.next = dummy;
     }
 
     public void showList(){
