@@ -20,7 +20,12 @@ public class CircularLinkedList<T> {
     }
 
     public void showList(){
+        Node<T> curr = dummy.next;
 
+        while(curr.next != dummy){
+            System.out.println(curr.getValue());
+            curr = curr.next;
+        }
     }
 
     public void showReverseList(){
