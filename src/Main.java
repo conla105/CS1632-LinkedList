@@ -14,6 +14,10 @@ public class Main {
         System.out.println(l.find(4));
         System.out.println(l.find(5));
 
+        l.remove(1);
+        l.showList();
+        l.showReverseList();
+        System.out.println(l.find(4));
 
 
     }

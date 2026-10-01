@@ -55,10 +55,21 @@ public class CircularLinkedList<T> {
             curr = curr.next;
             i++;
         }
+        //Return -1 if the value is missing
         return -1;
     }
 
     public void remove(T t){
+        Node<T> prev = dummy;
+        Node<T> curr = dummy.next;
 
+        while (curr != dummy){
+            if(curr.value == t){
+                prev.next = curr.next;
+                return;
+            }
+            prev = curr;
+            curr = curr.next;
+        }
     }
 }
