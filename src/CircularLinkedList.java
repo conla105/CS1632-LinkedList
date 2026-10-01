@@ -4,6 +4,7 @@ public class CircularLinkedList<T> {
 
     public CircularLinkedList(){
         dummy = new Node<T>(null);
+        dummy.next = dummy;
 
     }
 
@@ -22,18 +23,29 @@ public class CircularLinkedList<T> {
     public void showList(){
         Node<T> curr = dummy.next;
 
-        while(curr.next != dummy){
-            System.out.println(curr.getValue());
+        while(curr != dummy) {
+            System.out.print(curr.getValue()+" ");
             curr = curr.next;
         }
+        System.out.println();
     }
 
     public void showReverseList(){
-
+        showReverse(dummy.next);
+        System.out.println();
     }
 
-    public void find(T t){
+    private void showReverse(Node curr){
+        if (curr == dummy){
+            return;
+        }
 
+        showReverse(curr.next);
+        System.out.print(curr.value+" ");
+    }
+
+    public int find(T t){
+        return 0;
     }
 
     public void remove(T t){
