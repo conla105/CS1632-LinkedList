@@ -1,2 +1,6 @@
-public class Node {
+public class Node<T> {
+
+    public Node(){
+
+    }
 }
