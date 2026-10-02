@@ -46,9 +46,26 @@ class CircularLinkedListTest {
 
     @Test
     void find() {
+        CircularLinkedList<Integer> circularLinkedList = new CircularLinkedList();
+        circularLinkedList.addItem(20);
+        circularLinkedList.addItem(40);
+        circularLinkedList.addItem(60);
+        circularLinkedList.addItem(88);
+
+        assertEquals(2, circularLinkedList.find(60));
     }
 
     @Test
     void remove() {
+        CircularLinkedList<Integer> circularLinkedList = new CircularLinkedList();
+        circularLinkedList.addItem(20);
+        circularLinkedList.addItem(40);
+        circularLinkedList.addItem(60);
+        circularLinkedList.addItem(88);
+
+        circularLinkedList.remove(60);
+
+        assertEquals(2, circularLinkedList.find(88));
+
     }
 }
