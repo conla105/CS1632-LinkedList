@@ -32,6 +32,16 @@ class CircularLinkedListTest {
 
     @Test
     void showReverseList() {
+        CircularLinkedList<Integer> circularLinkedList = new CircularLinkedList<>();
+        circularLinkedList.addItem(44);
+        circularLinkedList.addItem(22);
+
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+
+        circularLinkedList.showReverseList();
+
+        assertEquals("22 44 "+System.lineSeparator(), output.toString());
     }
 
     @Test
